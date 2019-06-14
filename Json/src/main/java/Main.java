@@ -1,6 +1,6 @@
+import bean.Bean;
+import bean.DataBean;
 import com.yanxuwen.json.JsonUtils;
-import com.yanxuwen.json.bean.Bean;
-import com.yanxuwen.json.bean.DataBean;
 
 public class Main {
 
