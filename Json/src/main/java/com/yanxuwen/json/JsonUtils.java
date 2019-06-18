@@ -35,7 +35,11 @@ public class JsonUtils {
                     } else if (object instanceof JSONArray){
                         jsonArray = (JSONArray)object;
                     } else {
-                        return parseObject(String.valueOf(object), clazz);
+                        if (i == str.length -1 ){//最后一层，直接解析
+                            return parseObject(String.valueOf(object), clazz);
+                        } else {//中间层获取失败
+                            return parseObject("", clazz);
+                        }
                     }
                 } else if (str[i] instanceof Integer || str[i] instanceof Long) {
                     if (jsonArray == null){
